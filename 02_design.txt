@@ -1,0 +1,45 @@
+handy_functions:
+    read_json (opens json for use in program)
+    dump_json (creates/rewrites data into json)
+
+edit_goods:
+    create_inventory (creates a new inventory)
+    add_item (adds on new item to an inventory)
+    delete_item (deletes item from an inventory)
+    edit_item (edits name or price or an item)
+
+calculator:
+    calc_subtotal
+    calc_tax
+    calc_total
+
+cash_register:
+    scan_in (scans items into order)
+    pay (calculates totals and simulates customer paying)
+    receipt (creates receipt/ creates or adds to receipt.json)
+    shop (runs application)
+
+goods:
+    add (adds item dictionary to checkout list)
+    display_goods (displays a list of inventory and allows user to add to checkout using name of item)
+    item_lookup (allows user to add to checkout list by searching via item name and pull up an inventory list if needed.)
+    order (creates order.json)
+
+pos_admin:
+    display_items (lists inventory)
+    display_receipts (lits compiled receipt info)
+    edit_goods (access EditGoods class)
+    admin (runs application[added ability to store compiled info about receipts])
+
+receipts:
+     total_income
+     total_tax_owed
+     delete_receipts
+
+**Nice-to-haves for cash_register.py:
+
+*Require the cashier to login. (would need to store passwords somewhere - consider hash() function)
+*Number the items in a transaction and allow the cashier to remove an item before calculating total.
+*Store more data in receipts file.
+*Consider error checking for anomalous scenarios.
+*Add additional features you think could be useful.

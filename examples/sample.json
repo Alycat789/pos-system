@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Widget",
+        "price": 1.99
+    },
+    {
+        "name": "Nom-Nom",
+        "price": 2.5
+    },
+    {
+        "name": "Whozit",
+        "price": 3.29
+    },
+    {
+        "name": "Dunno",
+        "price": 19.25
+    }
+]

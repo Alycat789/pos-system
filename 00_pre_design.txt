@@ -1,0 +1,64 @@
+2 runnable applications
+cash_register:
+    *reads a stores list of goods/services
+        -displays a menu of items and prices
+        -allows user to 'look-up' item by name or ID
+            +this would add the item to the transaction
+    *has option to complete the sale after adding items
+        -read another settings file for tax percentage
+        -calculates
+            +subtotal
+            +sales tax
+            +grand total
+        -record values of items in an external receipt file
+
+classes:
+    goods:
+        -read_goods
+        -display_goods
+        -item_lookup
+    calculator:
+        -subtotal
+        -sales_tax
+        -grand_total
+    cash_register:
+        -scan_in
+        -pay
+        -receipt
+        -shop
+            +includes all previous functions
+
+
+pos_admin:
+    *display stored list of items/services and prices
+    *Allow user to
+        -add new
+        -delete existing
+        -edit existing
+    *display the content of the receipts file and
+        -total gross income
+        -total tax owed
+    *allow user to clear the receipts list
+
+classes:
+    edit:
+        -add
+        -delete
+        -edit
+    receipts:
+        -total_receipts
+        -total_tax
+        -delete_receipts
+    display:
+        -receipts
+        -items
+    pos_admin:
+        -admin
+
+Nice-to-haves for cash_register.py:
+
+*Require the cashier to login. (would need to store passwords somewhere - consider hash() function)
+*Number the items in a transaction and allow the cashier to remove an item before calculating total.
+*Store more data in receipts file.
+*Consider error checking for anomalous scenarios.
+*Add additional features you think could be useful.

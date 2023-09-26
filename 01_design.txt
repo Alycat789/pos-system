@@ -1,0 +1,40 @@
+cash_register classes:
+    files:
+        -settings (json)(tax)
+        -inventory (json)(dict, item: price)
+
+    goods:
+        -add_to_checkout
+        -display_goods (would add item to check-out)
+        -item_lookup (would add item to check-out)(based on name or number)
+
+    calculator:
+        -subtotal (adds all prices together)
+        -sales_tax(applies tax to subtotal)
+        -grand_total(add tax to subtotal)
+
+    cash_register:
+        -scan_in (where you add items)
+        -pay (where all pay related functions would work)
+        -receipt (creates and stores the receipt)
+        -shop
+            +includes all previous functions
+
+pos_admin classes:
+
+    classes:
+        edit_goods:
+            -add_item
+            -delete_item
+            -edit_item
+        receipts:
+            -total_receipts
+            -total_tax
+            -delete_receipts
+        pos_admin:
+            -display_items
+            -display_receipts
+            -admin
+
+
+And when all else fails, improvise.

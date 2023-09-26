@@ -1,0 +1,42 @@
+[
+    {
+        "name": "vanilla",
+        "price": "5"
+    },
+    {
+        "name": "chocolate",
+        "price": "5"
+    },
+    {
+        "name": "strawberry",
+        "price": "5"
+    },
+    {
+        "name": "oreo",
+        "price": "5"
+    },
+    {
+        "name": "birthday cake",
+        "price": "5"
+    },
+    {
+        "name": "chocolate chip cookie dough",
+        "price": "5"
+    },
+    {
+        "name": "small",
+        "price": "1"
+    },
+    {
+        "name": "med",
+        "price": "3"
+    },
+    {
+        "name": "large",
+        "price": "5"
+    },
+    {
+        "name": "sprinkles",
+        "price": "0.5"
+    }
+]

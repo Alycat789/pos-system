@@ -1,0 +1,66 @@
+[
+    {
+        "name": "basket ball",
+        "price": "15"
+    },
+    {
+        "name": "soccer ball",
+        "price": "15"
+    },
+    {
+        "name": "foot ball",
+        "price": "15"
+    },
+    {
+        "name": "volley ball",
+        "price": "15"
+    },
+    {
+        "name": "dodge ball",
+        "price": "10"
+    },
+    {
+        "name": "base ball",
+        "price": "15"
+    },
+    {
+        "name": "exercise pants",
+        "price": "20"
+    },
+    {
+        "name": "exercise shorts",
+        "price": "15"
+    },
+    {
+        "name": "exercise shirt",
+        "price": "20"
+    },
+    {
+        "name": "tank top",
+        "price": "15"
+    },
+    {
+        "name": "sports bra",
+        "price": "15"
+    },
+    {
+        "name": "cleats",
+        "price": "50"
+    },
+    {
+        "name": "gloves",
+        "price": "15"
+    },
+    {
+        "name": "socks",
+        "price": "10"
+    },
+    {
+        "name": "team jersey",
+        "price": "30"
+    },
+    {
+        "name": "team bottoms",
+        "price": "20"
+    }
+]

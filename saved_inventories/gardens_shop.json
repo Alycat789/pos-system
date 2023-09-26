@@ -1,0 +1,74 @@
+[
+    {
+        "name": "soil",
+        "price": "35"
+    },
+    {
+        "name": "gnome",
+        "price": "25"
+    },
+    {
+        "name": "mulch",
+        "price": "50"
+    },
+    {
+        "name": "pot",
+        "price": "20"
+    },
+    {
+        "name": "gloves",
+        "price": "8"
+    },
+    {
+        "name": "hoe",
+        "price": "25"
+    },
+    {
+        "name": "shovel",
+        "price": "25"
+    },
+    {
+        "name": "rake",
+        "price": "25"
+    },
+    {
+        "name": "hose",
+        "price": "45"
+    },
+    {
+        "name": "sprinkler",
+        "price": "30"
+    },
+    {
+        "name": "sprayer nozzle",
+        "price": "25"
+    },
+    {
+        "name": "lawn",
+        "price": "1000"
+    },
+    {
+        "name": "small gnome",
+        "price": "15"
+    },
+    {
+        "name": "large gnome",
+        "price": "35"
+    },
+    {
+        "name": "succulent",
+        "price": "15"
+    },
+    {
+        "name": "seeds",
+        "price": "10"
+    },
+    {
+        "name": "annual",
+        "price": "15"
+    },
+    {
+        "name": "perennial",
+        "price": "15"
+    }
+]
