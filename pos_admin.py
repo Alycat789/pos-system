@@ -26,15 +26,15 @@ class POSAdmin:
         """Allows admin to add/edit/delete items"""
         item = None
         show = None
-        action = input("would you like to create or edit your inventory?('create'/'edit'): ")
+        action = input("would you like to [create] or [edit] your inventory?: ")
         if action[0].lower() == 'c':
                 self.edit.create_inventory()
         while True:
             if action[0].lower() == 'e':
                 caption = "Would you like to: \n"
-                caption += "add an item('add')\n"
-                caption += "delete and item('del')\nor\n"
-                caption += "edit an item('edit')\n: "
+                caption += "[add] an item\n"
+                caption += "[del]ete and item\nor\n"
+                caption += "[edit] an item\n: "
                 edit = input(caption)
                 if edit[0].lower() == 'a':
                     self.edit.add_item()
@@ -45,10 +45,10 @@ class POSAdmin:
                     item = input("Edit which item?: ")
                     self.edit.edit_item(item)
                 else:
-                    show = input("Would you like to see the inventory?(y/n): ")
+                    show = input("Would you like to see the inventory?[y|n]: ")
                     if show[0].lower() == 'y':
                         self.display_items()
-            again = input('Do you have more edits to make?(y/n): ')
+            again = input('Do you have more edits to make?[y|n]: ')
             if again[0].lower() == 'n':
                 break
 
@@ -62,7 +62,7 @@ class POSAdmin:
         sure = None
         print("Hello Admin,\nWelcome!")
         while True:
-            action = input("What would you like to work on today?(receipts/inventory/): ")
+            action = input("What would you like to work on today?\n[receipts] or [inventory]: ")
             #*
             if action is None or len(action) == 0:
                 print("You must enter an action!")
@@ -71,28 +71,32 @@ class POSAdmin:
                 #*
                 r_action = ""
                 while len(r_action) < 1:
-                    r_action = input("Receipt totals or delete receipts?(totals/delete): ")
+                    r_action = input("Receipt [totals] or [delete] receipts?: ")
                     if r_action is None or len(r_action) == 0:
                         print("Please enter totals or delete!")
                 if r_action[0].lower() == 't':
                     totals = self.display_receipts()
                     print(totals)
-                    store = input("Store totals?(y/n): ")
+                    store = input("Store totals?[y|n]: ")
                     date = input("Today's date?: ")
                     save = {date: totals}
                     if store[0].lower() == 'y':
                         load_json("receipt_totals.json", save)
                 elif r_action[0].lower() == 'd':
-                    sure = input("Are you sure you want to delete the current receipts file?(y/n): ")
+                    sure = input("Are you sure you want to delete the current receipts file?[y|n]: ")
                     if sure[0].lower() == 'y':
                         self.receipts.delete_receipts()
             if action[0].lower() == 'i':
-                i_action = input("Show or edit inventory?(show/edit): ")
+                i_action = ""
+                while len(i_action) < 1:
+                    i_action = input("[Show] or [edit] inventory?: ")
+                    if i_action is None or len(i_action) == 0:
+                        print("Please enter show or edit!")
                 if i_action[0].lower() == 's':
                     self.display_items()
                 elif i_action[0].lower() == 'e':
                     self.edit_goods()
-            again = input('Do you have more to do?(y/n): ')
+            again = input('Do you have more to do?[y|n]: ')
             if again[0].lower() == 'n':
                 break
 

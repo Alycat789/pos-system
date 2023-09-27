@@ -57,7 +57,7 @@ class EditGoods:
             print('This item does not exist.')
         else:
             print(target_dict)
-            name_or_price = input("Would you like to change the name or the price?: ")
+            name_or_price = input("Would you like to change the [name] or the [price]?: ")
             if name_or_price[0].lower() == 'n':
                 new_name = input("What is the item's new name?: ")
                 target_dict['name'] = new_name

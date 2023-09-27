@@ -19,7 +19,7 @@ class CashRegister:
 
     def scan_in(self):
         """add items to order"""
-        method = input('Search(by name) or List?("name"/"list"): ')
+        method = input('Search by [name] or [list]?: ')
         if method[0].lower() == 'n':
             self.goods.item_lookup()
             self.goods.make_order()
@@ -34,7 +34,7 @@ class CashRegister:
         self.tax = self.calc.calc_tax()
         self.total = self.calc.calc_total()
         print(f'Your total is: {self.total}')
-        pay = input("Did the customer pay?: (y/n)")
+        pay = input("Did the customer pay?: [y|n]")
         if pay[0].lower() == 'y':
             paid = True
         if paid == True:
@@ -73,7 +73,7 @@ class CashRegister:
     def shop(self):
         """POS system executes"""
         while True:
-            run = input("Hello cashier! Ready to checkout?(y/n): ")
+            run = input("Hello cashier! Ready to checkout?[y|n]: ")
             if run[0].lower() == 'n':
                 break
             if run[0].lower() == 'y':
