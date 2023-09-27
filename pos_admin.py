@@ -31,7 +31,11 @@ class POSAdmin:
                 self.edit.create_inventory()
         while True:
             if action[0].lower() == 'e':
-                edit = input("Would you like to: \nadd an item('add')\ndelete and item('del')\nor\nedit an item('edit')\n: ")
+                caption = "Would you like to: \n"
+                caption += "add an item('add')\n"
+                caption += "delete and item('del')\nor\n"
+                caption += "edit an item('edit')\n: "
+                edit = input(caption)
                 if edit[0].lower() == 'a':
                     self.edit.add_item()
                 elif edit[0].lower() == 'd':
