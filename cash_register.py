@@ -60,11 +60,13 @@ class CashRegister:
         load_json('receipts.json', receipts)
 
     def reset_pay_totals(self):
+        """resets totals between transactions"""
         self.subtotal = 0
         self.tax = 0
         self.total = 0
 
     def reset_order(self):
+        """resets the order.json file between transactions"""
         order = os.path.join(ROOT_DIR, 'order.json')
         os.remove(order)
         load_json('order.json', [])
@@ -82,8 +84,6 @@ class CashRegister:
                 self.pay()
                 self.order_number += 1
             
-            
-
 def main():
     """test"""
     cr = CashRegister('gardens_shop.json')
@@ -92,7 +92,6 @@ def main():
     # cr.receipt()
     cr.shop()
     # cr.reset_order()
-
 
 if __name__ == "__main__":
     main()

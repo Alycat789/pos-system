@@ -1,1 +1,62 @@
-[]
+[
+    {
+        "order #": 1,
+        "subtotal": 155,
+        "tax": 9.299999999999999,
+        "total": 164.3,
+        "items": [
+            {
+                "name": "gnome",
+                "price": "25"
+            },
+            {
+                "name": "pot",
+                "price": "20"
+            },
+            {
+                "name": "small gnome",
+                "price": "15"
+            },
+            {
+                "name": "large gnome",
+                "price": "35"
+            },
+            {
+                "name": "annual seeds",
+                "price": "10"
+            },
+            {
+                "name": "perennial seeds",
+                "price": "15"
+            },
+            {
+                "name": "succulent",
+                "price": "15"
+            },
+            {
+                "name": "lawn flamingo",
+                "price": "20"
+            }
+        ]
+    },
+    {
+        "order #": 3,
+        "subtotal": 595,
+        "tax": 35.699999999999996,
+        "total": 630.7,
+        "items": [
+            {
+                "name": "pot",
+                "price": "20"
+            },
+            {
+                "name": "lawn",
+                "price": "550"
+            },
+            {
+                "name": "gnome",
+                "price": "25"
+            }
+        ]
+    }
+]

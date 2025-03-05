@@ -18,7 +18,7 @@ class Goods:
         self.checkout_list.append(item)
 
     def display_goods(self):
-        """displays a list of goods to pick from to add to order."""
+        """displays inventory list to pick from and add to order."""
         inventory = read_json(self.file_name)
         while True:
             target_d = None
@@ -39,7 +39,11 @@ class Goods:
             
 
     def item_lookup(self):
-        """allows user to look up an item to add to order"""
+        """
+        allows user to look up an item typing in it's name, 
+        asks to show inventory list if the item searched for is not in inventory,
+        adds item to order once found
+        """
         inventory = read_json(self.file_name)
         print('Type "q" to quit.')
         while True:

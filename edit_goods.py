@@ -11,7 +11,7 @@ class EditGoods:
         self.inventory = []        
 
     def create_inventory(self):
-        """creates inventory"""
+        """creates inventory list, adds initial item dictionaries"""
         print("Type 'q' to exit.")
         while True:
             name = input("What would you like to add?: ")
@@ -23,7 +23,7 @@ class EditGoods:
         load_json(self.file_name, self.inventory)
 
     def add_item(self):
-        """adds item to inventory"""
+        """adds item to inventory list as a dictionary"""
         self.inventory = read_json(self.file_name)
         name = input("What would you like to add?: ")
         price = input("How much will this cost?: ")
@@ -32,7 +32,7 @@ class EditGoods:
         load_json(self.file_name, self.inventory)
 
     def delete_item(self, item):
-        """deletes an item from inventory"""
+        """deletes an item dictionary from inventory list"""
         target_dict = None
         self.inventory = read_json(self.file_name)
         for d in self.inventory:
@@ -45,7 +45,7 @@ class EditGoods:
             load_json(self.file_name, self.inventory)
 
     def edit_item(self, item):
-        """edits an item in the inventory"""
+        """edits an item dictionary in the inventory list"""
         target_dict = None
         new_name = None
         new_price = None
