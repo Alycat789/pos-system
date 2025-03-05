@@ -3,7 +3,11 @@ from receipts import Receipts
 from edit_goods import EditGoods
 
 class POSAdmin:
-    """runs admin application"""
+    """
+    runs admin application
+    allows admin to view/edit inventory and view/delete compiled receipt information
+    filename must be submitted as an argument
+    """
 
     def __init__(self, file_name) -> None:
         self.file_name = file_name
