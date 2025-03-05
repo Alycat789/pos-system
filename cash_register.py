@@ -7,7 +7,7 @@ ROOT_DIR = os.path.dirname(__file__)
 class CashRegister:
     """
     Point of sale
-    shop inventory file must be added asan argument
+    shop inventory file must be added as an argument
     """
 
     def __init__(self, file_name) -> None:
