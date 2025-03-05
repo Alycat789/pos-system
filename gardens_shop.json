@@ -5,7 +5,7 @@
     },
     {
         "name": "gnome",
-        "price": "25"
+        "price": "5"
     },
     {
         "name": "mulch",
@@ -44,10 +44,6 @@
         "price": "25"
     },
     {
-        "name": "lawn",
-        "price": "550"
-    },
-    {
         "name": "small gnome",
         "price": "15"
     },
@@ -78,5 +74,9 @@
     {
         "name": "soaker hose",
         "price": "50"
+    },
+    {
+        "name": "hori hori",
+        "price": "19.50"
     }
 ]

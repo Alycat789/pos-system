@@ -5,7 +5,10 @@ from handy_functions import read_json, load_json
 ROOT_DIR = os.path.dirname(__file__)
 
 class CashRegister:
-    """Point of sale"""
+    """
+    Point of sale
+    shop inventory file must be added asan argument
+    """
 
     def __init__(self, file_name) -> None:
         self.file_name = file_name

@@ -53,8 +53,10 @@ class POSAdmin:
                 break
 
     def admin(self):
-        """allows admin access to POS system: 
-        receipts reports/deletion, inventory creation/edits[item additions/deletions/edits]"""
+        """
+        Runs the admin application
+        Allows the admin to view/edit inventory, view compiled receipt information, and delete receipts
+        """
         totals = {}
         store = None
         date = None
@@ -107,7 +109,7 @@ def main():
     # print(admin.display_receipts())
     # admin = POSAdmin('sports_shop.json')
     # admin.edit_goods()
-    admin = POSAdmin('ice_cream_shop.json')
+    admin = POSAdmin('gardens_shop.json')
     admin.admin()
 
 if __name__ == "__main__":
