@@ -12,23 +12,33 @@ class CashRegister:
         self.file_path = os.path.join(ROOT_DIR, self.file_name)
         self.goods = Goods(file_name)
         self.calc = Calculator()
-        self.order_number = 1
         self.subtotal = 0
         self.tax = 0
         self.total = 0
+        self.order_number = 1
+        # creates/reads order number file
+        # with open('order_number.txt', 'r') as f:
+        #     self.order_number = int(f.read())
 
     def scan_in(self):
         """add items to order"""
-        method = input('Search by [name] or [list]?: ')
-        if method[0].lower() == 'n':
-            self.goods.item_lookup()
-            self.goods.make_order()
-        if method[0].lower() == 'l':
-            self.goods.display_goods()
-            self.goods.make_order()
+        method = "invalid"
+        while method[0].lower() != 'n' and method[0].lower() != 'l':
+            method = input('Search by [name] or [list]?: ')
+            if method[0].lower() == 'n':
+                self.goods.item_lookup()
+                self.goods.make_order()
+            elif method[0].lower() == 'l':
+                self.goods.display_goods()
+                self.goods.make_order()
+            else:
+                print('Invalid input. Please try again.')
 
     def pay(self):
-        """prices and tax totaled and returned"""
+        """
+        calculates prices and tax totaled and returned
+        creates receipt
+        """
         paid = False
         self.subtotal = self.calc.calc_subtotal()
         self.tax = self.calc.calc_tax()
@@ -47,7 +57,9 @@ class CashRegister:
             self.reset_order()
 
     def receipt(self):
-        """creates and stores receipts"""
+        """
+        creates and stores individual receipt dictionaries in the receipt.json file
+        """
         receipts = read_json('receipts.json')
         order = read_json('order.json')
         receipt = {}
@@ -73,7 +85,12 @@ class CashRegister:
         self.goods.checkout_list = []
 
     def shop(self):
-        """POS system executes"""
+        """
+        POS system executes 
+        asks cashier if ready to checkout
+        if ready, resets totals and scans in items/handles payment/creates receipt/increments order number
+        if not ready, exits
+        """
         while True:
             run = input("Hello cashier! Ready to checkout?[y|n]: ")
             if run[0].lower() == 'n':
@@ -83,6 +100,9 @@ class CashRegister:
                 self.scan_in()
                 self.pay()
                 self.order_number += 1
+                # records/updates order number
+                # with open('order_number.txt', 'w') as f:
+                #     f.write(str(self.order_number))
             
 def main():
     """test"""

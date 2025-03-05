@@ -9,6 +9,11 @@ class Goods:
     """allows access to inventory for selection"""
 
     def __init__(self, file_name) -> None:
+        """
+        Initializer for Goods class.
+        Sets file path and name from argument given.
+        Initializes empty checkout_list.
+        """
         self.checkout_list = []
         self.file_name = file_name
         self.file_path = os.path.join(ROOT_DIR, self.file_name)
