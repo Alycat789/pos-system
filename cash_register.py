@@ -43,9 +43,9 @@ class CashRegister:
         creates receipt
         """
         paid = False
-        self.subtotal = self.calc.calc_subtotal()
-        self.tax = self.calc.calc_tax()
         self.total = self.calc.calc_total()
+        self.subtotal = self.calc.subtotal
+        self.tax = self.calc.tax
         print(f'Your total is: {self.total}')
         pay = input("Did the customer pay?: [y|n]")
         if pay[0].lower() == 'y':
@@ -53,10 +53,13 @@ class CashRegister:
         if paid == True:
             self.receipt()
             self.reset_order()
+        # maybe unnecessary to keep track of cancelled orders...
         elif paid == False:
             print('Order cancelled')
             order = read_json('order.json')
-            load_json('cancelled_orders.json', order)
+            cancelled = read_json('cancelled_orders.json')
+            cancelled.append(order)
+            load_json('cancelled_orders.json', cancelled)
             self.reset_order()
 
     def receipt(self):

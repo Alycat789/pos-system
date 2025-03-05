@@ -1,6 +1,20 @@
-{
-    "02/05/2025": {
-        "Gross Income": 901.0,
-        "Total Tax Owed": 50.99999999999999
+[
+    {
+        "02/06/2025": {
+            "Gross Income": 312.7,
+            "Total Tax Owed": 17.7
+        }
+    },
+    {
+        "03/25/2025": {
+            "Gross Income": 323.3,
+            "Total Tax Owed": 18.3
+        }
+    },
+    {
+        "02548526": {
+            "Gross Income": 323.3,
+            "Total Tax Owed": 18.3
+        }
     }
-}
+]

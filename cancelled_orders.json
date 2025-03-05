@@ -1,6 +1,20 @@
 [
     {
-        "name": "gnome",
-        "price": "25"
-    }
+        "name": "succulent",
+        "price": "15"
+    },
+    [
+        {
+            "name": "hori hori",
+            "price": "20"
+        },
+        {
+            "name": "rake",
+            "price": "25"
+        },
+        {
+            "name": "shovel",
+            "price": "25"
+        }
+    ]
 ]

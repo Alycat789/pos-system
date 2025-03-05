@@ -7,6 +7,7 @@ class POSAdmin:
     runs admin application
     allows admin to view/edit inventory and view/delete compiled receipt information
     filename must be submitted as an argument
+    prices must be integers
     """
 
     def __init__(self, file_name) -> None:
@@ -83,11 +84,14 @@ class POSAdmin:
                 if r_action[0].lower() == 't':
                     totals = self.display_receipts()
                     print(totals)
-                    store = input("Store totals?[y|n]: ")
+                    store = input("Store totals? This wil empty the current receipts record. [y|n]: ")
                     date = input("Today's date?: ")
                     save = {date: totals}
                     if store[0].lower() == 'y':
-                        load_json("receipt_totals.json", save)
+                        all = read_json("receipt_totals.json")
+                        all.append(save)
+                        load_json("receipt_totals.json", all)
+                        load_json("receipts.json", [])  # deletes receipts file, because it is now saved
                 elif r_action[0].lower() == 'd':
                     sure = input("Are you sure you want to delete the current receipts file?[y|n]: ")
                     if sure[0].lower() == 'y':

@@ -15,15 +15,15 @@ class Calculator:
         order = read_json('order.json')
         sub_list = []
         for d in order:
-            sub_list.append(int(d['price']))
+            sub_list.append(float(d['price']))
         self.subtotal = sum(sub_list)
-        return self.subtotal
+        return round(self.subtotal, 2)
 
     def calc_tax(self):
         """applies tax to subtotal"""
         tax_rate = self.tax_percent/100
         self.tax = tax_rate * self.subtotal
-        return self.tax
+        return round(self.tax, 2)
 
     def calc_total(self):
         """adds tax to total"""

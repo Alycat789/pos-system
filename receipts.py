@@ -15,8 +15,10 @@ class Receipts:
         receipts = read_json(self.file_name)
         for d in receipts:
             income.append(d['total'])
+        print(income)
         gross_income = sum(income)
-        return gross_income
+        print("gross income: ", gross_income)
+        return round(gross_income, 2)
 
     def total_tax_owed(self):
         """totals tax owed from receipts"""
@@ -24,8 +26,10 @@ class Receipts:
         receipts = read_json(self.file_name)
         for d in receipts:
             tax.append(d['tax'])
+        print(tax)
         tax_owed = sum(tax)
-        return tax_owed
+        print("tax owed: ", tax_owed)
+        return round(tax_owed, 2)
 
     def delete_receipts(self):
         """deletes receipts"""

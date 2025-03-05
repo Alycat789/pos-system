@@ -29,7 +29,7 @@ class Goods:
             target_d = None
             for d in inventory:
                 print(f"{d['name']}: {d['price']}")
-            add_to_order = input("(Type 'q' to quit.)\nWhat item would you like to add to your order?")
+            add_to_order = input("(Type 'q' to quit.)\nWhat item would you like to add to your order?: ")
             if add_to_order[0].lower() == 'q':
                 break
             for d in inventory:
